@@ -1,12 +1,18 @@
 # 🔒 Secure Flask Authentication API with JWT & 2FA
+# 🛡️ **Secure RESTful API with Flask & MySQL**  
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Flask-2.0+-red?logo=flask&logoColor=white">
-  <img src="https://img.shields.io/badge/MySQL-8.0+-blue?logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/JWT-Authentication-green">
-  <img src="https://img.shields.io/badge/2FA-TOTP-purple">
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=OAuth%20Login%20With%20Github&fontAlignY=40&fontSize=40&fontColor=ffffff" alt="Title Banner"/>
+</p>  
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Made%20With-Python-blue?style=for-the-badge&logo=python&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Flask-API%20Framework-red?style=for-the-badge&logo=flask&logoColor=white"/>
+    <img src="https://img.shields.io/badge/JWT-Authentication-green?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/2FA-TOTP%20Google%20Authenticator-purple?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql"/>
 </p>
+
 
 A secure RESTful API built with Flask that implements JWT authentication, Two-Factor Authentication (2FA) via TOTP (Google Authenticator), and GitHub OAuth integration.
 
@@ -179,7 +185,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 📬 Connect with Me  
+
 <p align="center">
-  Made with ❤️ by [Your Name]
-</p>
-```
+    <a href="mailto:aghazal085@gmail.com">
+        <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail&logoColor=white"/>
+    </a>
+    <a href="https://www.linkedin.com/in/ahmedghaza1" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    </a>
+</p>  
+
+---
+
+<p align="center">
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=150&color=gradient&section=footer" alt="Footer">
+</p>  
+
+
