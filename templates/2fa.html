@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Factor Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Two-Factor Authentication</h2>
+        <p class="text-sm text-gray-600 mb-4">Enter the code from your authenticator app</p>
+        <form id="2faForm">
+            <div class="mb-4">
+                <label for="totpCode" class="block text-sm font-medium text-gray-700">TOTP Code</label>
+                <input type="text" id="totpCode" name="totpCode" class="mt-1 block w-full px-3 py-2 border rounded-md" required>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Verify</button>
+        </form>
+        <p id="error" class="mt-4 text-red-500 text-center hidden"></p>
+    </div>
+    <script>
+        document.getElementById('2faForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const totpCode = document.getElementById('totpCode').value;
+            const tempToken = localStorage.getItem('tempToken');
+            const errorEl = document.getElementById('error');
+
+            if (!tempToken) {
+                errorEl.textContent = 'Session expired. Please login again.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+
+            try {
+                const response = await fetch('/verify-2fa', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ tempToken, totpCode })
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    localStorage.removeItem('tempToken');
+                    localStorage.setItem('token', data.token);
+                    window.location.href = '/dashboard';
+                } else {
+                    errorEl.textContent = data.error;
+                    errorEl.classList.remove('hidden');
+                }
+            } catch (err) {
+                errorEl.textContent = 'Network error';
+                errorEl.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
