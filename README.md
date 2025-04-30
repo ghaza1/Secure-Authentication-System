@@ -1,5 +1,3 @@
-
-```markdown
 # 🔒 Secure Flask Authentication API with JWT & 2FA
 
 <p align="center">
