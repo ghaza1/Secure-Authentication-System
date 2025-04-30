@@ -1,8 +1,5 @@
-# 🔒 Secure Flask Authentication API with JWT & 2FA
-# 🛡️ **Secure RESTful API with Flask & MySQL**  
-
 <p align="center">
-    <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=OAuth%20Login%20With%20Github&fontAlignY=40&fontSize=40&fontColor=ffffff" alt="Title Banner"/>
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Secure%20Authentication%20System&fontAlignY=40&fontSize=40&fontColor=ffffff" alt="Title Banner"/>
 </p>  
 
 <p align="center">
@@ -54,8 +51,8 @@ A secure RESTful API built with Flask that implements JWT authentication, Two-Fa
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/flask-auth-api.git
-   cd flask-auth-api
+   git clone https://github.com/ghaza1/Secure-Authentication-System
+   cd Secure-Authentication-System
    ```
 
 2. Create and activate a virtual environment:
